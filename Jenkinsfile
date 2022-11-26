@@ -24,5 +24,19 @@ pipeline {
                 echo "testing stage"
             }
         }
+         
+         stage('Deploy') { 
+            steps {
+                echo "Deploying..."
+            }
+        }
     }
+     post{
+          always{
+               echo "pipeline concluded."
+          }
+          sucess{
+               echo "all stages executed with success."
+          }
+     }
 }
