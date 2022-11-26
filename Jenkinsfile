@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo "building states"
                 sh 'apt-get update' 
-                sh 'apt install nodejs'
+                sh 'apt-get --assume-yes nodejs'
                 sh 'npm install' 
             }
         }
