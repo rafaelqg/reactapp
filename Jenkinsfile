@@ -12,6 +12,8 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "building states"
+                sh 'apt-get update' 
+                sh 'apt install nodejs'
                 sh 'npm install' 
             }
         }
