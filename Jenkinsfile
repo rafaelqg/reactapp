@@ -35,7 +35,7 @@ pipeline {
           always{
                echo "pipeline concluded."
           }
-          sucess{
+          success{
                echo "all stages executed with success."
           }
      }
