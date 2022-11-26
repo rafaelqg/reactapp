@@ -12,11 +12,11 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "building states"
-                sh 'apt-get update' 
-                sh 'apt-get install --assume-yes nodejs'
-                sh 'node -v' 
-                sh 'apt-get install --assume-yes npm'
-                sh 'npm install' 
+                #sh 'apt-get update' 
+                #sh 'apt-get install --assume-yes nodejs'
+                #sh 'node -v' 
+                #sh 'apt-get install --assume-yes npm'
+                #sh 'npm install' 
             }
         }
          stage('Test') { 
