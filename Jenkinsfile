@@ -1,13 +1,13 @@
 pipeline {
-     
+    /* 
      agent {  
         docker {
             image 'node:lts-bullseye-slim' 
             args '-p 3000:3000' 
         }  
     }
-    
-   /* agent any*/
+    */
+    agent any
     stages {
         stage('Build') { 
             steps {
@@ -16,7 +16,7 @@ pipeline {
                 //sh 'apt-get install --assume-yes nodejs'
                 //sh 'node -v' 
                 //sh 'apt-get install --assume-yes npm'
-                sh 'npm install' 
+               // sh 'npm install' 
             }
         }
          stage('Test') { 
