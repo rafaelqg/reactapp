@@ -1,22 +1,19 @@
 pipeline {
-     
+     /*
      agent {  
         docker {
             image 'node' 
             args '-p 3000:3000' 
         }  
     }
-    
-    //agent any
+    */
+    agent any
     stages {
         stage('Build') { 
             steps {
                 echo "building states"
-                //sh 'apt-get update' 
-                //sh 'apt-get install --assume-yes nodejs'
                 sh 'node -v' 
-                //sh 'apt-get install --assume-yes npm'
-               // sh 'npm install' 
+                sh 'npm install' 
             }
         }
          stage('Test') { 
