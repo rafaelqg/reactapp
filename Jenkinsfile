@@ -26,7 +26,7 @@ pipeline {
          stage('Deploy') { 
             steps {
                 echo "Deploying..."
-                sh 'npm start & sleep 1'
+                sh 'npm start'
             }
         }
     }
