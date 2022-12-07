@@ -20,7 +20,7 @@ pipeline {
          stage('Test') { 
             steps {
                 echo "testing stage"
-                sh "npm test"
+                sh "nohup npm test &"
             }
         }
          
