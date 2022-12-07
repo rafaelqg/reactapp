@@ -20,14 +20,14 @@ pipeline {
          stage('Test') { 
             steps {
                 echo "testing stage"
-                sh "nohup npm test &"
+                sh "npm test"
             }
         }
          
          stage('Deploy') { 
             steps {
                 echo "Deploying..."
-                sh 'nohub npm start &'
+                sh 'npm start'
             }
         }
     }
