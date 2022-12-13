@@ -1,6 +1,6 @@
 const {MongoClient} = require('mongodb');
-const uri = "mongodb://localhost:27017";//$ mongo mongodb://<host>:<port>
-//const uri = "mongodb+srv://mongo:DWydXaVKaMObkhMX@cluster0.xkbdmmm.mongodb.net/?retryWrites=true&w=majority";
+//const uri = "mongodb://localhost:27017";//$ mongo mongodb://<host>:<port>
+const uri = "mongodb+srv://mongo2:DWydXaVKaMObkhMX@cluster0.xkbdmmm.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useUnifiedTopology: true });
 class DAOMongoDB{
     getAllEmployees = async function(){
