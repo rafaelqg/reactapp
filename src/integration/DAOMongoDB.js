@@ -4,6 +4,7 @@ const uri = "mongodb+srv://mongo:DWydXaVKaMObkhMX@cluster0.xkbdmmm.mongodb.net/?
 const client = new MongoClient(uri, { useUnifiedTopology: true });
 class DAOMongoDB{
     getAllEmployees = async function(){
+        try{
             await client.connect();
           //  console.log("Connecting...", client);
             let db=client.db("company");//access or create a new database
@@ -13,6 +14,10 @@ class DAOMongoDB{
             let cursor=collection.find(queryObject);
             //console.log("cursor", cursor);
             return await cursor.toArray();
+        }catch (e){
+            console.log(e);
+            return [];
+        }
     }
 
     insertTestObjects= function (){
